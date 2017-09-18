@@ -192,68 +192,6 @@ $("#mycanvas").val("");
 											
 											
  
-			 /* data3 = {
-		    		 
-				        labels:bodyType,
-				        datasets: [
-				            {
-				               
-				                data: noOfVechiclesBodyType,
-				                backgroundColor: [
-				                  
-				                	 "#FAEBD7",
-				                     "#DCDCDC",
-				                     "#E9967A",
-				                     "#F5DEB3",
-				                     "#9ACD32",
-				                     'moccasin',
-				                     'saddlebrown',
-				                     'lightpink'
-				                ],
-				                borderColor: [
-				                 
-				                	 "#CDA776",
-				                     "#989898",
-				                     "#CB252B",
-				                     "#E39371",
-				                     "#1D7A46",
-				                     'moccasin',
-				                     'saddlebrown',
-				                     'lightpink'
-				                ],
-				                borderWidth: [1, 1, 1, 1, 1,1,1,1]
-				            }
-				        ]
-				    };
-
-			
-			 var   data4 = {
-				    datasets: [{
-				        data: noOfVechiclesBodyType,backgroundColor: [
-      		                  
-   		                	 "#FAEBD7",
-   		                     "#DCDCDC",
-   		                     "#E9967A",
-   		                     "#F5DEB3",
-   		                     "#9ACD32",
-   		                     'moccasin',
-   		                     'saddlebrown',
-   		                     'lightpink',
-   		               "#DCDCDC",
-	                     "#E9967A",
-	                     "#F5DEB3",
-	                     "#9ACD32",
-	                 'moccasin',
-	                     'saddlebrown',
-	                     'lightpink',
-   		                ]
-				        
-				    }],
-
-				    // These labels appear in the legend and in the tooltips when hovering different arcs
-				    labels: bodyType
-				};
-			  */
 			 chartdata = {
 						labels: cityName,
 						datasets: [
