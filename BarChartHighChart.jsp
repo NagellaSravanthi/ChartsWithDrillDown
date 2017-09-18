@@ -72,8 +72,6 @@
 	background-color: #3e8e41;
 }
 </style>
-
-
 <div class="container">
 	<h2>Table</h2>
 	<div class="table-responsive" id="chartjs-tooltip">
