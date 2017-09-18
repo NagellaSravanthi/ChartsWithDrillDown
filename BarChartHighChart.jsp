@@ -161,7 +161,7 @@ $("#mycanvas").val("");
     console.log (stateName[item[0]._index]);
     $.ajax({
 		
-		url : '<%=application.getContextPath()%>/GetBankDetailsCity',
+		url : '<%=application.getContextPath()%>/GetDetails',
 		type : "GET",
 		data:{"list":stateName[item[0]._index]},
 		success : function(data){
@@ -222,15 +222,7 @@ $("#mycanvas").val("");
 			    data: chartdata,
 			    options:{}
 			    	});
-			 /*   chart1 = new Chart(ctxPie, {
-			        type: "pie",
-			        data: data5,
-			        options: options
-			    });
-			 
-			   */
-			  
-			  
+		
 			    //pie chart data
 			     data2 = {
 			    		 labels: cityName,
