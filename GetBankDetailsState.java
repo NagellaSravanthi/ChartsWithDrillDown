@@ -41,27 +41,7 @@ public class GetBankDetailsState extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/json");
-		   TransportClient client=GetClientObjectUtil.getObject();
-	/*	
-		SearchResponse  response1 = client.prepareSearch("bank").addAggregation( AggregationBuilders.terms("keys").field("state.keyword").order(Terms.Order.count(false)))
-				.execute().actionGet();
-		Terms  terms1 = response1.getAggregations().get("keys");
-		Collection<Terms.Bucket> buckets1 = terms1.getBuckets();
-		System.out.println("aggregation details   "+buckets1);
-		
-		ArrayList data=new ArrayList();
-		
-		for (Bucket bucket : buckets1) {
-			DataBean bean=new DataBean();
-			bean.setMakerName((String) bucket.getKey());
-			bean.setNoOfVechicles((int) bucket.getDocCount());
-			data.add(bean); 
-		}
-		
-		
-		*/
-		
-		
+		 
 		   ArrayList<BankBean> data=new ArrayList();
 		StatsAggregationBuilder aggregation =
 		        AggregationBuilders
@@ -70,11 +50,10 @@ public class GetBankDetailsState extends HttpServlet {
 		
 
 		/*
-		 * specific state sum ,min,max
+		 * getResponse method return the aggregation data
 		 *
 		*/
-		SearchResponse  sr = client.prepareSearch("bank").addAggregation( AggregationBuilders.terms("state").field("state.keyword").subAggregation(aggregation)).execute().actionGet();
-		
+		SearchResponse  sr = getResponse(aggregation);
 		Terms  terms= sr.getAggregations().get("state");
 		
 		double min = 0;
@@ -121,21 +100,7 @@ Collection<Terms.Bucket> buckets = terms.getBuckets();
 		request.setAttribute("data1", data);
 		request.getSession().setAttribute("data", data);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	}
 
 	/**
